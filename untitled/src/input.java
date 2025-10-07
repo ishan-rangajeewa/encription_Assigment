@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -8,6 +7,8 @@ public class input {
         System.out.print("Please enter Plain Text: ");
         String plainText = input.nextLine();
         stringTOint stringTOint = new stringTOint(plainText);
+        Keycounter kgenarator = new Keycounter();
+        kgenarator.keygenStringCounter(plainText);
         System.out.println(Arrays.toString(stringTOint.string2int(plainText)));
     }
 }
