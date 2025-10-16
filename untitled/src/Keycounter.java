@@ -1,11 +1,12 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class Keycounter {
     String temp = "";
 
-    void keygenStringCounter(String plainText){
+    Keycounter (String plainText){
         int len = plainText.length();
-        String[] parts = new String[len];
+        String[] parts;
         parts =  plainText.split(" ");
 
         for(String part : parts){
@@ -16,8 +17,6 @@ public class Keycounter {
                 temp = part;
             }
         }
-        System.out.println(temp);
-        Keygen();
 
     }
     int[] Keygen(){
@@ -26,9 +25,9 @@ public class Keycounter {
         for(int i=0;i<len;i++){
             Random rand = new Random();
             int genInt = rand.nextInt(26)+1;
-            key[i] = genInt + (char)temp.charAt(i);
-            System.out.println("key : "+key[i]);
+            key[i] = genInt;
         }
+        System.out.println("key: "+Arrays.toString(key));
         return key;
     }
 
