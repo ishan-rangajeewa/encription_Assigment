@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class stringTOint {
     public int[] texttoint;
     int len;
@@ -13,6 +15,7 @@ public class stringTOint {
             int c =  plainText.charAt(i);
             texttoint[i] = c;
         }
+        System.out.println("int2String: "+ Arrays.toString(texttoint));
         return texttoint;
     }
 }

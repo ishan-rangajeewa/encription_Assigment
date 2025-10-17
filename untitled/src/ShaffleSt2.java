@@ -18,7 +18,7 @@ public class ShaffleSt2 {
                 enwordSt1[i] = enwordSt1[i-1];
             }
             enwordSt1[0] = lastInEn;
-            System.out.println(ii+" : "+Arrays.toString(enwordSt1));
+            //System.out.println(ii+" : "+Arrays.toString(enwordSt1));
         }
         System.out.println("shafffled st2: "+ Arrays.toString(enwordSt1));
         enwordSt2=enwordSt1;

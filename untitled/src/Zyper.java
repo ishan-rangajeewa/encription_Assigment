@@ -23,7 +23,7 @@ public class Zyper {
         int [] Key = keyC.Keygen();
         this.keylen = Key.length;
         int [] textInt  = s2t.string2int(paintx);
-        System.out.println("convertd int : "+Arrays.toString(textInt));
+        //System.out.println("convertd int : "+Arrays.toString(textInt));
         int temp = 0;
         for(int i=0;i<wordlen;i++){
             if(temp>=keylen){

@@ -16,7 +16,18 @@ public class ZyperDecript {
                 enwordSt2[j]=enwordSt2[j+1];
             }
             enwordSt2[enwordSt2.length-1] = fistinEnword;
-            System.out.println(i+" : "+Arrays.toString(enwordSt2));
         }
+        System.out.println("shafffled st2 De: "+ Arrays.toString(enwordSt2));
+
+        int[] decript_St1 = new int[enwordSt2.length];
+        int temp = 0;
+        for (int i = 0; i < enwordSt2.length; i++) {
+            if(temp>=Key.length){
+                temp = 0;
+            }
+            decript_St1[i] = enwordSt2[i] - Key[temp];
+            temp++;
+        }
+        System.out.println("shafffled st1 De: "+ Arrays.toString(decript_St1));
     }
 }
