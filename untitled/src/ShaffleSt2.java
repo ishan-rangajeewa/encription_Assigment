@@ -20,9 +20,7 @@ public class ShaffleSt2 {
             enwordSt1[0] = lastInEn;
             //System.out.println(ii+" : "+Arrays.toString(enwordSt1));
         }
-        System.out.println("shafffled st2: "+ Arrays.toString(enwordSt1));
         enwordSt2=enwordSt1;
-        ZyperDecript Zyd = new ZyperDecript(enwordSt2,KeySt1);
         return enwordSt2;
     }
 

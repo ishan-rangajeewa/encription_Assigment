@@ -27,7 +27,7 @@ public class Keycounter {
             int genInt = rand.nextInt(26)+1;
             key[i] = genInt;
         }
-        System.out.println("key: "+Arrays.toString(key));
+        System.out.println("key: \t"+Arrays.toString(key));
         return key;
     }
 

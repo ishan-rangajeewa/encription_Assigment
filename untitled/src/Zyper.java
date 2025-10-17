@@ -32,9 +32,20 @@ public class Zyper {
             encriptedWord[i]=textInt[i] + Key[temp];
             temp++;
         }
-        System.out.println("Encripted st 1: "+Arrays.toString(encriptedWord));
+        System.out.println("Encripted st 1: \t"+Arrays.toString(encriptedWord));
         ShaffleSt2 st2 = new ShaffleSt2(encriptedWord,Key);
         int[] encrtiptSt2 = st2.Shaffle();
+        System.out.println("shafffled st2: "+ Arrays.toString(encrtiptSt2));
+
+        int[] encrtiptSt3 = encrtiptSt2;
+        for(int i=0;i<wordlen;i++){
+            encrtiptSt3[i] = encrtiptSt2[i] ^ Key[i % keylen];
+
+        }
+        System.out.println("Encripted St3: \t"+Arrays.toString(encrtiptSt3));
+
+        ZyperDecript Zyd = new ZyperDecript(encrtiptSt3,Key);
+
         return encriptedWord;
     }
 }

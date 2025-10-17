@@ -5,9 +5,16 @@ public class ZyperDecript {
     int[] Key;
     int fistinEnword;
     int fistinkey;
-    ZyperDecript (int[] enwordSt2,int Key[]){
-        this.enwordSt2=enwordSt2;
+    ZyperDecript (int[] enwordSt3,int Key[]){
+        this.enwordSt2=enwordSt3;
         this.Key=Key;
+
+        for (int i = 0; i < enwordSt3.length; i++) {
+            enwordSt2[i] = enwordSt3[i] ^ Key[i % Key.length];
+
+        }
+        System.out.println("Encripted St3 De: \t"+Arrays.toString(enwordSt3));
+
         //fistinEnword = enwordSt2[0];
         fistinkey = Key[0];
         for(int i=0;i<fistinkey;i++){

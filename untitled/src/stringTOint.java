@@ -15,7 +15,7 @@ public class stringTOint {
             int c =  plainText.charAt(i);
             texttoint[i] = c;
         }
-        System.out.println("int2String: "+ Arrays.toString(texttoint));
+        System.out.println("int2String: \t"+ Arrays.toString(texttoint));
         return texttoint;
     }
 }
