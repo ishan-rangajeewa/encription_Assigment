@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Base64;
 
 public class Zyper {
     stringTOint s2t;
@@ -39,10 +40,13 @@ public class Zyper {
 
         //ZyperDecript Zyd = new ZyperDecript(encrtiptSt3,Key);
         encriptedWord = encrtiptSt3;
+        IntToByte intToByte = new IntToByte();
+        String encodedWord = Base64.getEncoder().encodeToString(intToByte.Int2Byte(encriptedWord));
+        String key = Base64.getEncoder().encodeToString(intToByte.Int2Byte(Key));
         IntToString intToString = new IntToString();
         IntToString intToString2 = new IntToString();
-        System.out.println("Encripted Word:"+intToString.int2string(encriptedWord));
-        System.out.println("Key :"+intToString2.int2string(Key));
+        System.out.println("Encripted Word:"+encodedWord);
+        System.out.println("Key :"+key);
         return encriptedWord;
     }
 }

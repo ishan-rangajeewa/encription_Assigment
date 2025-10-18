@@ -1,3 +1,4 @@
+import java.util.Base64;
 import java.util.Scanner;
 
 public class input {
@@ -23,8 +24,10 @@ public class input {
                     String entext = scr2.nextLine();
                     System.out.print("Key: ");
                     String keyText = scr2.nextLine();
-                    stringTOint s2i =new stringTOint();
-                    ZyperDecript Zyd = new ZyperDecript(s2i.String2int2(entext),s2i.String2int2(keyText));
+                    byte[] EncripText = Base64.getDecoder().decode(entext);
+                    byte[] EncripKey = Base64.getDecoder().decode(keyText);
+                    IntToByte intToByte = new IntToByte();
+                    ZyperDecript Zyd = new ZyperDecript(intToByte.Byte2Int(EncripText),intToByte.Byte2Int(EncripKey));
                     break;
                 case 3:
                     System.exit(0);
